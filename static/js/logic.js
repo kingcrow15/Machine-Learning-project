@@ -1,6 +1,6 @@
 
-d3.csv("./top_20_movies_and_posters.csv").then(function(Data) {
-    console.log(Data)
+d3.csv("./top_20_movies_and_posters.csv").then(render).then(function(Data) {
+    console.log(Data);
 });
 
 // csv1 = "../top_20_movies_and_posters.csv"
