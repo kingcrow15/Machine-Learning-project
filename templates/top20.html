@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   
 	
-<title>Movie Match:For Us</title>
+<title>Movie Match:top 20</title>
 </head>
 <body class="mybg">
 	
@@ -50,19 +50,15 @@
   </div>
 </nav>
 
-   <body class="forus">
+   <body>
 
-
-   <div class="column">
-   <div class="row">
- <div class='column'>
    <form action="#" name="userinfo" onSubmit="return(validate());">
  <table cellpadding="2" width="20%" bgcolor="white" align="center"
 
    cellspacing="2">
  <tr>
    <td colspan=2>
-   <center><font size=4><b>User Info 1</b></font></center>
+   <center><font size=4><b>User Info</b></font></center>
    </td>
    </tr>
 
@@ -76,239 +72,109 @@
    <td><input type="radio" name="sex" value="male" size="10">Male
    <input type="radio" name="sex" value="Female" size="10">Female</td>
  </tr>
-
- <div class='column'>
- <div class='row'>
-<tr>
-<td>Genre-1</td>
-<td><select name="genre-1">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Preference</option>
-<option value="Action">Action</option>
-</select></td>
-</tr>
-
-<tr>
-<td>Genre-2</td>
-<td><select name="genre-2">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Preference</option>
-<option value="Action">Action</option>
-</select></td>
-</tr>
-<tr>
-
-<td>Genre-3</td>
-<td><select name="genre-3">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Preference</option>
-<option value="Action">Action</option>
-</select></td>
-</tr>
-
-<tr>
-<td>Actor-1</td>
-<td><select name="Actor-1">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Prefernce</option>
-<option value="Nicholas Cage">Nicholas Cage</option>
-<option value="Denzel Washington">Denzel washington</option>
-<option value="Jeri Ryan">Jeri Ryan</option>
-
-</select></td>
-</tr>
-
-<tr>
-<td>Actor-2</td>
-<td><select name="Actor-2">
-<option value="-1" selected>Select..</option>
-<option value="Jeri Ryan">No Prefernce</option>
-<option value="Nicholas Cage">Nicholas Cage</option>
-<option value="Denzel washington">Denzel washington</option>
-<option value="Jeri Ryan">Jeri Ryan</option>
-</select></td>
-</tr>
-
-  <tr>
-<td>Actor-3</td>
-<td><select name="Actor-3">
-<option value="-1" selected>Select..</option>
-<option value="Jeri Ryan">No Prefernce</option>
-<option value="Nicholas Cage">Nicholas Cage</option>
-<option value="Denzel washington">Denzel washington</option>
-<option value="Jeri Ryan">Jeri Ryan</option>
-</select></td>
-</tr>
-
-
-<tr>
-<td>Director-1</td>
-<td><select name="director-1">
-<option value="-1" selected>Select..</option>
-<option value="Jordan Peele">No Prefernce</option>
-<option value="Steven Speilberg">steven Speilberg</option>
-<option value="Quetin Tarintino">Quetin Tarintino</option>
-<option value="Jordan Peele">Jordan Peele</option>
-
-</select></td>
-</tr>
-
-<tr>
-<td>Director-2</td>
-<td><select name="director-2">
-<option value="-1" selected>Select..</option>
-<option value="Jordan Peele">No Prefernce</option>
-<option value="Steven Speilberg">steven Speilberg</option>
-<option value="Quetin Tarintino">Quetin Tarintino</option>
-<option value="Jordan Peele">Jordan Peele</option>
-</select></td>
-</tr>
-
-  <tr>
-<td>Director-3</td>
-<td><select name="director-3">
-<option value="-1" selected>Select..</option>
-<option value="Jordan Peele">No Prefernce</option>
-<option value="Steven Speilberg">steven Speilberg</option>
-<option value="Quetin Tarintino">Quetin Tarintino</option>
-<option value="Jordan Peele">Jordan Peele</option>
-</select></td>
-</tr>
-
-  <tr>
-  <td>EmailId</td>
-  <td><input type="text" name="emailid" id="emailid" size="30"></td>
-  </tr>
-</div>
-
- <div class='column'>
-   <form action="#" name="userinfo" onSubmit="return(validate());">
- <table cellpadding="2" width="20%" bgcolor="white" align="center"
-
-   cellspacing="2">
- <tr>
-   <td colspan=2>
-   <center><font size=4><b>User Info 1</b></font></center>
-   </td>
-   </tr>
-
- <tr>
-   <td>Name</td>
-   <td><input type=text name=textnames id="textname" size="30"></td>
-   </tr>
-
- <tr>
-   <td>Sex</td>
-   <td><input type="radio" name="sex" value="male" size="10">Male
-   <input type="radio" name="sex" value="Female" size="10">Female</td>
- </tr>
-
- <div class='column'>
- <div class='row'>
-<tr>
-<td>Genre-1</td>
-<td><select name="genre-1">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Preference</option>
-<option value="Action">Action</option>
-</select></td>
-</tr>
-
-<tr>
-<td>Genre-2</td>
-<td><select name="genre-2">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Preference</option>
-<option value="Action">Action</option>
-</select></td>
-</tr>
-<tr>
-
-<td>Genre-3</td>
-<td><select name="genre-3">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Preference</option>
-<option value="Action">Action</option>
-</select></td>
-</tr>
-
-<tr>
-<td>Actor-1</td>
-<td><select name="Actor-1">
-<option value="-1" selected>Select..</option>
-<option value="No Preference">No Prefernce</option>
-<option value="Nicholas Cage">Nicholas Cage</option>
-<option value="Denzel Washington">Denzel washington</option>
-<option value="Jeri Ryan">Jeri Ryan</option>
-
-</select></td>
-</tr>
-
-<tr>
-<td>Actor-2</td>
-<td><select name="Actor-2">
-<option value="-1" selected>Select..</option>
-<option value="Jeri Ryan">No Prefernce</option>
-<option value="Nicholas Cage">Nicholas Cage</option>
-<option value="Denzel washington">Denzel washington</option>
-<option value="Jeri Ryan">Jeri Ryan</option>
-</select></td>
-</tr>
-
-  <tr>
-<td>Actor-3</td>
-<td><select name="Actor-3">
-<option value="-1" selected>Select..</option>
-<option value="Jeri Ryan">No Prefernce</option>
-<option value="Nicholas Cage">Nicholas Cage</option>
-<option value="Denzel washington">Denzel washington</option>
-<option value="Jeri Ryan">Jeri Ryan</option>
-</select></td>
-</tr>
-
-
-<tr>
-<td>Director-1</td>
-<td><select name="director-1">
-<option value="-1" selected>Select..</option>
-<option value="Jordan Peele">No Prefernce</option>
-<option value="Steven Speilberg">steven Speilberg</option>
-<option value="Quetin Tarintino">Quetin Tarintino</option>
-<option value="Jordan Peele">Jordan Peele</option>
-
-</select></td>
-</tr>
-
-<tr>
-<td>Director-2</td>
-<td><select name="director-2">
-<option value="-1" selected>Select..</option>
-<option value="Jordan Peele">No Prefernce</option>
-<option value="Steven Speilberg">steven Speilberg</option>
-<option value="Quetin Tarintino">Quetin Tarintino</option>
-<option value="Jordan Peele">Jordan Peele</option>
-</select></td>
-</tr>
-
-  <tr>
-<td>Director-3</td>
-<td><select name="director-3">
-<option value="-1" selected>Select..</option>
-<option value="Jordan Peele">No Prefernce</option>
-<option value="Steven Speilberg">steven Speilberg</option>
-<option value="Quetin Tarintino">Quetin Tarintino</option>
-<option value="Jordan Peele">Jordan Peele</option>
-</select></td>
-</tr>
-
-  <tr>
-  <td>EmailId</td>
-  <td><input type="text" name="emailid" id="emailid" size="30"></td>
-  </tr>
-</div>
 
  
- </div>
+<tr>
+<td>Genre-1</td>
+<td><select name="genre-1">
+<option value="-1" selected>Select..</option>
+<option value="No Preference">No Preference</option>
+<option value="Action">Action</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Genre-2</td>
+<td><select name="genre-2">
+<option value="-1" selected>Select..</option>
+<option value="No Preference">No Preference</option>
+<option value="Action">Action</option>
+</select></td>
+</tr>
+<tr>
+
+<td>Genre-3</td>
+<td><select name="genre-3">
+<option value="-1" selected>Select..</option>
+<option value="No Preference">No Preference</option>
+<option value="Action">Action</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Actor-1</td>
+<td><select name="Actor-1">
+<option value="-1" selected>Select..</option>
+<option value="No Preference">No Prefernce</option>
+<option value="Nicholas Cage">Nicholas Cage</option>
+<option value="Denzel Washington">Denzel washington</option>
+<option value="Jeri Ryan">Jeri Ryan</option>
+
+</select></td>
+</tr>
+
+<tr>
+<td>Actor-2</td>
+<td><select name="Actor-2">
+<option value="-1" selected>Select..</option>
+<option value="Jeri Ryan">No Prefernce</option>
+<option value="Nicholas Cage">Nicholas Cage</option>
+<option value="Denzel washington">Denzel washington</option>
+<option value="Jeri Ryan">Jeri Ryan</option>
+</select></td>
+</tr>
+
+  <tr>
+<td>Actor-3</td>
+<td><select name="Actor-3">
+<option value="-1" selected>Select..</option>
+<option value="Jeri Ryan">No Prefernce</option>
+<option value="Nicholas Cage">Nicholas Cage</option>
+<option value="Denzel washington">Denzel washington</option>
+<option value="Jeri Ryan">Jeri Ryan</option>
+</select></td>
+</tr>
+
+
+<tr>
+<td>Director-1</td>
+<td><select name="director-1">
+<option value="-1" selected>Select..</option>
+<option value="Jordan Peele">No Prefernce</option>
+<option value="Steven Speilberg">steven Speilberg</option>
+<option value="Quetin Tarintino">Quetin Tarintino</option>
+<option value="Jordan Peele">Jordan Peele</option>
+
+</select></td>
+</tr>
+
+<tr>
+<td>Director-2</td>
+<td><select name="director-2">
+<option value="-1" selected>Select..</option>
+<option value="Jordan Peele">No Prefernce</option>
+<option value="Steven Speilberg">steven Speilberg</option>
+<option value="Quetin Tarintino">Quetin Tarintino</option>
+<option value="Jordan Peele">Jordan Peele</option>
+</select></td>
+</tr>
+
+  <tr>
+<td>Director-3</td>
+<td><select name="director-3">
+<option value="-1" selected>Select..</option>
+<option value="Jordan Peele">No Prefernce</option>
+<option value="Steven Speilberg">steven Speilberg</option>
+<option value="Quetin Tarintino">Quetin Tarintino</option>
+<option value="Jordan Peele">Jordan Peele</option>
+</select></td>
+</tr>
+
+  <tr>
+  <td>EmailId</td>
+  <td><input type="text" name="emailid" id="emailid" size="30"></td>
+  </tr>
+
   
 
      </table>

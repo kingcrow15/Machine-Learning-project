@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<meta content="en-us" http-equiv="Content-Language">
@@ -5,12 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   
 	
-<title>Movie match</title>
+<title>Movie Match: About</title>
 </head>
-<body style="background-color: #CED4DA; height: 198px;">
+<body class="mybg">
 	
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +23,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
+        <!-- "{{ url_for('top1000') }}" -->
         <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
       </li>
 
@@ -32,18 +36,14 @@
         Find a Movie
         </a>
         <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="forme.html">For Me</a>
-        <a class="dropdown-item" href="forus.html">For US</a>
-      	<a class="dropdown-item" href="top100.html">Top 100</a>
-        <a class="dropdown-item" href="action.html">Action</a>
-        <a class="dropdown-item" href="comedy.html">Comedy</a>
-      	<a class="dropdown-item" href="scary.html">Scary</a>
-      	<a class="dropdown-item" href="romance.html">Romance</a>
-        <a class="dropdown-item" href="sci-fi.html">Sci-fi</a>
-        <a class="dropdown-item" href="anime.html">Anime</a>
-        <a class="dropdown-item" href="drama.html">Drama</a>
-        <a class="dropdown-item" href="fantansy.html">fantasy</a>
-        <a class="dropdown-item" href="documentary.html">Documentary</a>
+        <a class="dropdown-item" href="{{ url_for('forme') }}">For Me</a>
+        <a class="dropdown-item" href="{{ url_for('forus') }}">For US</a>
+      	<a class="dropdown-item" href="{{ url_for('top20') }}">Top 20</a>
+        <a class="dropdown-item" href="{{ url_for('genres') }}">Genre</a>
+        <a class="dropdown-item" href="{{ url_for('search') }}">Search</a>
+      	<a class="dropdown-item" href=#>1</a>
+      	<a class="dropdown-item" href=#>2</a>
+        <a class="dropdown-item" href=#>3</a>
         </div>
       </li>
     </ul>
@@ -53,13 +53,36 @@
 <body class="about">
 
 <div>
-	<h1 class="text-center"><strong>4J Development Group</strong></h1>
+<h1 class="text-center"><strong>4J Development Group</strong></h1>
 <p class="text-center">
 * we will be using 'The Movie Database' (TMDB.com) to assist us in finding the movies you like.&nbsp; </p>
 </div>
-
 <div class="text-center">
 <h1>4J developemnt Group</h1>
+<p> Oh, the weather outside is frightful
+But the fire is so delightful
+And since we've no place to go
+Let it snow, let it snow, let it snow
+Man, it doesn't show signs of stopping
+And I've brought some corn for popping
+The lights are turned way down low
+Let it snow, let it snow, let it snow
+When we finally kiss goodnight
+How I hate going out in the storm
+But if you really hold me tight
+All the way home I'll be warm
+The fire is slowly dying
+And my dear we're still goodbye-ing
+As long as you love me so
+Let it snow, let it snow, let it snow
+When we finally kiss goodnight
+How I hate going out in the storm
+But if you really hold me tight
+All the way home I'll be warm
+The fire is slowly dying
+And my dear we're still goodbye-ing
+As long as you love me so
+Let it snow, let it snow, let it snow, alright</p></div>
 
 <nav>
     <div class="center">
