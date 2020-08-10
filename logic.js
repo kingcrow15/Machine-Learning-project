@@ -4,8 +4,6 @@
 d3.csv("./top_20_movies_and_posters.csv", function(error, data) {
 // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
     console.log(data);
-}).catch(function(error) {
-    console.log(error);
   });
 
 // csv1 = "../top_20_movies_and_posters.csv"

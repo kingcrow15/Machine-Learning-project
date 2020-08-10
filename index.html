@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta content="en-us" http-equiv="Content-Language">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  
+	
+<title>Movie Match</title>
+</head>
+<body class="mybg">
+	
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <!-- "{{ url_for('top1000') }}" -->
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Find a Movie
+        </a>
+        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{{ url_for('forme') }}">For Me</a>
+        <a class="dropdown-item" href="{{ url_for('forus') }}">For US</a>
+      	<a class="dropdown-item" href="{{ url_for('top20') }}">Top 20</a>
+        <a class="dropdown-item" href="{{ url_for('genres') }}">Genre</a>
+        <a class="dropdown-item" href="{{ url_for('search') }}">Search</a>
+      	<a class="dropdown-item" href=#>1</a>
+      	<a class="dropdown-item" href=#>2</a>
+        <a class="dropdown-item" href=#>3</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<center><p>lets find a movie that you will enjoy.</p>
+
+<div>
+<h1 class="text-center"><strong>Movie Matcher</strong></h1>
+<p class="text-center">Lets get started with your favorite movies genres , actors, and directors.</p>
+<p class="text-center">* We will be using 'The Movie Database' (TMDB.com) to assist us in finding the movies you like.&nbsp; </p>
+</div>
+
+<nav>
+    <div>
+        <ul>
+            <li>
+<div class="column">
+<center>Top 20 recommend<br></center>
+  <!-- "{{ url_for('static', filename='styles/Assets/logo.png') }}" -->
+<div class="column">
+<img clsss=mvPoster alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+</div>
+  <hr>
+<div class="column">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+</div>
+  <hr>
+<div class="column">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+</div>
+  <hr>
+<div class="column">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+<img alt="" height="280" width="200" longdesc="Movie Title" src="{{ url_for('static', filename='images/default.jpg') }}">
+  </div>
+</div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<script type="text/javascript" src="./logic.js"></script>
+
+</body>
+
+</html>
