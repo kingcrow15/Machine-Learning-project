@@ -18,6 +18,28 @@ def index():
 def about():
 	return render_template('about.html')
 
+@app.route("/forme")
+def forme():
+	return render_template('forme.html')
+
+@app.route("/forus")
+def forus():
+	return render_template('forus.html')
+
+@app.route("/top100")
+def top100():
+	return render_template('top100.html')
+
+@app.route("/comedy")
+def comedy():
+	return render_template('comedy.html')
+
+
+
+@app.route("/action")
+def action():
+	return render_template('action.html')
+
 @app.route('/top250')
 def top250():
 	return render_template('Top250.html')

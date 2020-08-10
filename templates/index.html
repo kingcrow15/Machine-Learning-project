@@ -7,8 +7,9 @@
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  
 	
 <title>Movie match</title>
 </head>
@@ -35,18 +36,18 @@
         Find a Movie
         </a>
         <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="forme.html">For Me</a>
-        <a class="dropdown-item" href="forus.html">For US</a>
-    	<a class="dropdown-item" href="top100.html">Top 100</a>
-        <a class="dropdown-item" href="action.html">Action</a>
-        <a class="dropdown-item" href="comedy.html">Comedy</a>
-    	<a class="dropdown-item" href="scary.html">Scary</a>
-    	<a class="dropdown-item" href="romance.html">Romance</a>
-        <a class="dropdown-item" href="sci-fi.html">Sci-fi</a>
-        <a class="dropdown-item" href="anime.html">Anime</a>
-        <a class="dropdown-item" href="drama.html">Drama</a>
-        <a class="dropdown-item" href="fantansy.html">fantasy</a>
-        <a class="dropdown-item" href="documentary.html">Documentary</a>
+                <a class="dropdown-item" href="{{ url_for('forme') }}">For Me</a>
+        <a class="dropdown-item" href="{{ url_for('forus') }}">For US</a>
+    	<a class="dropdown-item" href="{{ url_for('top100') }}">Top 100</a>
+        <a class="dropdown-item" href="{{ url_for('action') }}">Action</a>
+        <a class="dropdown-item" href="{{ url_for('comedy') }}">Comedy</a>
+    	<a class="dropdown-item" href=#>Scary</a>
+    	<a class="dropdown-item" href=#>Romance</a>
+        <a class="dropdown-item" href=#>Sci-fi</a>
+        <a class="dropdown-item" href=#>Anime</a>
+        <a class="dropdown-item" href=#>Drama</a>
+        <a class="dropdown-item" href=#>fantasy</a>
+        <a class="dropdown-item" href=#>Documentary</a>
         </div>
       </li>
     </ul>
