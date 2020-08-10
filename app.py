@@ -26,14 +26,18 @@ def forme():
 def forus():
 	return render_template('forus.html')
 
-@app.route("/top100")
-def top100():
-	return render_template('top100.html')
+@app.route("/top20")
+def top20():
+	return render_template('top20.html')
 
-@app.route("/comedy")
-def comedy():
-	return render_template('comedy.html')
 
+@app.route("/genres")
+def genres():
+	return render_template('genres.html')
+
+@app.route("/search")
+def search():
+	return render_template('search.html')
 
 
 @app.route("/action")
