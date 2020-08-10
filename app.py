@@ -10,8 +10,13 @@ from flask import url_for
 app=Flask(__name__)
 
 @app.route('/')
+@app.route("/home")
 def index():
-	return render_template('i.html')
+	return render_template('index.html')
+
+@app.route("/static/about")
+def about():
+	return render_template('about.html')
 
 @app.route('/top250')
 def top250():
