@@ -66,7 +66,7 @@
 
   
  .form  {
-    background-image: url(../images/rc4.jpg);
+    background-image: url(./images/rc4.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -75,7 +75,7 @@
 } 
 
 .forus  {
-  background-image: url(../images/dn.jpg);
+  background-image: url(./images/dn.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -84,7 +84,7 @@
 }
 
 .mybg  {
-  background-image: url(../images/rc3.jpg);
+  background-image: url(./images/rc3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -96,7 +96,7 @@
 }
 
 .about  {
-  background-image: url(../images/4j.gif);
+  background-image: url(./images/4j.gif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
