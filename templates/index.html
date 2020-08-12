@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
@@ -16,9 +16,10 @@
 <title>Movie Match</title>
 </head>
 <body class="mybg">
-	
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+  aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -51,10 +52,9 @@
     </ul>
   </div>
 </nav>
+<br>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<center><p>lets find a movie that you will enjoy.</p>
+<p class="text-center"> lets find a movie that you will enjoy.</p>
 
 <div>
 <h1 class="text-center"><strong>Movie Matcher</strong></h1>
@@ -62,48 +62,21 @@
 <p class="text-center">* We will be using 'The Movie Database' (TMDB.com) to assist us in finding the movies you like.&nbsp; </p>
 </div>
 
-<nav>
-    <div>
-        <ul>
-            <li>
+
 <div class="column">
-<center>Top 20 recommend<br></center>
-  <!-- "{{ url_for('static', filename='styles/Assets/logo.png') }}" -->
-<div class="column">
-<img clsss=mvPoster alt="" height="280" width="200" longdesc="Movie Title" src="images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="Movie Title" src="images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="Movie Title" src="images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="Movie Title" src="images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="Movie Title" src="images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="Movie Title" src="images/default.jpg">
-</div>
-  <hr>
-<div class="column">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-</div>
-  <hr>
-<div class="column">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-</div>
-  <hr>
-<div class="column">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-<img alt="" height="280" width="200" longdesc="Movie Title" src="src=images/default.jpg">
-  </div>
+
+  <p class="text-center"> Top 20 recommend </p>
+
+  <div class="container" style="max-width: 100%; padding: 5%; min-width: 99%;">
+    <div class="align-center row image_gallery" style="max-width: 100%; min-width: 99%; padding: 5%;">
+      <!-- Thumbnails go here: -->
+      <!-- <div class="col-sm-4"></div>
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4"></div> -->
+    </div>
+
+
+ 
 </div>
             </li>
         </ul>
