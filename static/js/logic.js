@@ -2,9 +2,10 @@
 genre_list = ['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy',
  'History', 'Horror', 'Music','Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 'War', 'Western']
 
-
+top20MoviesCSV = "../static/data/top_20_movies_and_posters.csv"
  
-  d3.csv("../static/data/top_20_movies_and_posters.csv").then(function(top20data) {
+// make csv changeable & filterable
+  d3.csv(top20MoviesCSV).then(function(top20data) {
   // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
       
     console.log(top20data)
