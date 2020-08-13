@@ -15,7 +15,7 @@
 	
 <title>Movie Match</title>
 </head>
-<body class="mybg">
+<body onload="PopularMoviePopulate()" class="mybg">
   
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -67,24 +67,25 @@
 
 <div class="container text-center" style="max-width: 100%; min-width: 99%;">
   <div class="btn-group text-center">
-    <button class="btn-group" type="button">Action</button>
-    <button class="btn-group" type="button">Adventure</button>
-    <button class="btn-group" type="button">Comedy</button>
-    <button class="btn-group" type="button">Crime</button>
-    <button class="btn-group" type="button">Documentary</button>
-    <button class="btn-group" type="button">Drama</button>
-    <button class="btn-group" type="button">Family</button>
-    <button class="btn-group" type="button">Fantasy</button>
-    <button class="btn-group" type="button">History</button>
-    <button class="btn-group" type="button">Horror</button>
-    <button class="btn-group" type="button">Music</button>
-    <button class="btn-group" type="button">Mystery</button>
-    <button class="btn-group" type="button">Romance</button>
-    <button class="btn-group" type="button">Science Fiction</button>
-    <button class="btn-group" type="button">Movie</button>
-    <button class="btn-group" type="button">Thriller</button>
-    <button class="btn-group" type="button">War</button>
-    <button class="btn-group" type="button">Western</button>
+    <button onclick="clearContent(); ActionMoviePopulate()" class="btn-group" type="button">Action</button>
+    <button onclick="clearContent(); AdventureMoviePopulate()" class="btn-group" type="button">Adventure</button>
+    <button onclick="clearContent(); AnimationMoviePopulate()" class="btn-group" type="button">Animation</button>
+    <button onclick="clearContent(); ComedyMoviePopulate()" class="btn-group" type="button">Comedy</button>
+    <button onclick="clearContent(); CrimeMoviePopulate()" class="btn-group" type="button">Crime</button>
+    <button onclick="clearContent(); DocumentaryMoviePopulate()" class="btn-group" type="button">Documentary</button>
+    <button onclick="clearContent(); DramaMoviePopulate()" class="btn-group" type="button">Drama</button>
+    <button onclick="clearContent(); FamilyMoviePopulate()" class="btn-group" type="button">Family</button>
+    <button onclick="clearContent(); FantasyMoviePopulate()" class="btn-group" type="button">Fantasy</button>
+    <button onclick="clearContent(); HistoryMoviePopulate()" class="btn-group" type="button">History</button>
+    <button onclick="clearContent(); HorrorMoviePopulate()" class="btn-group" type="button">Horror</button>
+    <button onclick="clearContent(); MusicMoviePopulate()" class="btn-group" type="button">Music</button>
+    <button onclick="clearContent(); MysteryMoviePopulate()" class="btn-group" type="button">Mystery</button>
+    <button onclick="clearContent(); RomanceMoviePopulate()" class="btn-group" type="button">Romance</button>
+    <button onclick="clearContent(); ScienceFictionMoviePopulate()" class="btn-group" type="button">Science Fiction</button>
+    <button onclick="clearContent(); TVMovieMoviePopulate()" class="btn-group" type="button">TV Movie</button>
+    <button onclick="clearContent(); ThrillerMoviePopulate()" class="btn-group" type="button">Thriller</button>
+    <button onclick="clearContent(); WarMoviePopulate()" class="btn-group" type="button">War</button>
+    <button onclick="clearContent(); WesternMoviePopulate()" class="btn-group" type="button">Western</button>
   </div>
 </div>
   <h1 class="text-center"> Top 20 most popular movies from IMDB </h1>
@@ -102,6 +103,9 @@
         </ul>
     </div>
 </nav>
+ <!-- API Key -->
+ <script src="{{ url_for('static', filename='js/config.js') }}"></script>
+ <!-- Logic file -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
 
 </body>
