@@ -85,7 +85,6 @@
 }
 
 
-
 .form  {
   background-image: url(../images/rc4.jpg);
   background-repeat: no-repeat;
@@ -145,10 +144,3 @@ color: #ffffff;
   background-color: #3e8e41 !important;;
 }
 
-.container-text-center {
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-}
