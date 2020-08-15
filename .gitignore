@@ -4,6 +4,8 @@ links.csv
 links_small.csv
 movies_metadata.csv
 ratings_small.csv
+ratings.csv
+
 top_20_movies_and_posters.csv
 movie_list.pckl
 TMBD API calls .ipynb
