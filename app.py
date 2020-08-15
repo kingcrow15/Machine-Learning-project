@@ -77,7 +77,7 @@ def genres():
 @app.route("/search")
 def search():
 	# title = request.form.get('textnames')
-	title = "Frozen"
+	title = "The Dark Knight"
 	idx = indices[title]
 
 	sim_scores = list(enumerate(cosine_sim[idx]))
@@ -85,7 +85,7 @@ def search():
 	sim_scores = sim_scores[1:26]
 	movie_indices = [i[0] for i in sim_scores]
 
-	movies = smd.iloc[movie_indices][['title', 'vote_count', 'vote_average', 'year', 'poster_path' ]]
+	movies = smd.iloc[movie_indices][['title', 'vote_count', 'vote_average', 'year', 'poster_path', 'id' ]]
 	vote_counts = movies[movies['vote_count'].notnull()]['vote_count'].astype('int')
 	vote_averages = movies[movies['vote_average'].notnull()]['vote_average'].astype('int')
 	m = vote_counts.quantile(0.95)	
@@ -112,7 +112,8 @@ def search():
 	for x in ad:
 		dc[x] = list(ad[x].values())
 		# print(x)
-	return jsonify(dc)
+	dc = jsonify(dc)
+	return dc
 
 
 

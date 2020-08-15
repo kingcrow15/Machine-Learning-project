@@ -1,8 +1,9 @@
 
 // console.log(qualified)
-
-d3.json("/search", function(dc){
+console.log("HI");
+d3.json("/search").then(function(dc){
   console.log(dc)
+  
 });
 
 
@@ -10,8 +11,37 @@ genre_list = ['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentar
  'History', 'Horror', 'Music','Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 'War', 'Western']
 
 
+function init() {
+  d3.json("/search").then(function(dc){
+    console.log(dc)
+    var Movies  = dc
+    console.log(Movies.post)
+      
+    //  (x =0; x < count; x++) {
+    d3.select(".image_gallery").selectAll("div")
+    .data(Movies.title)
+    .enter()
+    // .append("p")
+    // .text("hello!!!")
+    .append("div") // appends a div to placeholder
+    .style("height", "500", "width", "357")
+    .classed("box col-sm-6 col-md-4 col-lg-3 col-xl-2", true) // sets the class of the new div
+    
+    .html(function(data) {
+      console.log(data)
+      return `<h3 style="text-align: center"> <br> </h3><img height="500" width="357" src="https://image.tmdb.org/t/p/original${(data)}">`;
+    })
+    .exit()
+  }).catch(function(error) {
+    console.log(error);
+  });
+  // <img height="500" width="357" src="https://image.tmdb.org/t/p/original${(data)}">
+    // 
+}
 
-// console.log(genre_list)
+
+
+
 
 top20MoviesCSV = "../static/data/top_20_movies_and_posters.csv"
 
@@ -20,25 +50,13 @@ languageEnglish = "&language=en-US&page=1"
 API_KEY = "api_key=800fce5ab1ec74ebb99a75833c65f3df"
 popularMoviesAPI = popularTMDB + API_KEY + languageEnglish
 
-<<<<<<< HEAD
-// function myFunc(vars) {
-//   return vars
-// }
-function init() {
-  d3.json("/search", function(dc){
-    console.log(dc)
-  })
-  // console.log(`{{recommend}}`)
-}
 
-=======
-console.log(popularMoviesAPI)
->>>>>>> parent of 82e8808... all the genre buttons now populate the page
+function PopularMoviePopulate() {
 // make csv changeable & filterable
   d3.json(popularMoviesAPI).then(function(top20data) {
   // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
       
-    console.log(top20data.results)
+    // console.log(top20data.results)
 
     d3.select(".image_gallery").selectAll("div")
     .data(top20data.results)
@@ -57,8 +75,7 @@ console.log(popularMoviesAPI)
     }).catch(function(error) {
       console.log(error);
     });
-<<<<<<< HEAD
-  };
+};
 
 function clearContent() {
   d3.select(".image_gallery")
@@ -112,7 +129,7 @@ function ActionMoviePopulate() {
   
   AdventureMoviesAPI = AdventureMoviesTMDB + API_KEY + languageEnglish + AdventureMoviesTMDB_part2 + page_number + AdventureMoviesTMDB_part3
   
-  console.log(AdventureMoviesAPI)
+  // console.log(AdventureMoviesAPI)
   // make csv changeable & filterable
   function AdventureMoviePopulate() {
     d3.json(AdventureMoviesAPI).then(function(top20data) {
@@ -667,10 +684,5 @@ function ActionMoviePopulate() {
                                     console.log(error);
                                   });
                                 };
-=======
->>>>>>> parent of 82e8808... all the genre buttons now populate the page
 
-
-
-                                    init()
 
