@@ -1,21 +1,44 @@
 
+// console.log(qualified)
+
+d3.json("/search", function(dc){
+  console.log(dc)
+});
+
+
 genre_list = ['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy',
  'History', 'Horror', 'Music','Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 'War', 'Western']
+
+
+
+// console.log(genre_list)
 
 top20MoviesCSV = "../static/data/top_20_movies_and_posters.csv"
 
 popularTMDB = "https://api.themoviedb.org/3/movie/popular?" 
 languageEnglish = "&language=en-US&page=1"
-
+API_KEY = "api_key=800fce5ab1ec74ebb99a75833c65f3df"
 popularMoviesAPI = popularTMDB + API_KEY + languageEnglish
 
-// console.log(popularMoviesAPI)
+<<<<<<< HEAD
+// function myFunc(vars) {
+//   return vars
+// }
+function init() {
+  d3.json("/search", function(dc){
+    console.log(dc)
+  })
+  // console.log(`{{recommend}}`)
+}
+
+=======
+console.log(popularMoviesAPI)
+>>>>>>> parent of 82e8808... all the genre buttons now populate the page
 // make csv changeable & filterable
-function PopularMoviePopulate() {
   d3.json(popularMoviesAPI).then(function(top20data) {
   // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
       
-    // console.log(top20data.results)
+    console.log(top20data.results)
 
     d3.select(".image_gallery").selectAll("div")
     .data(top20data.results)
@@ -34,6 +57,7 @@ function PopularMoviePopulate() {
     }).catch(function(error) {
       console.log(error);
     });
+<<<<<<< HEAD
   };
 
 function clearContent() {
@@ -42,13 +66,13 @@ function clearContent() {
   .remove()
 }
 
+
 ActionMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
 languageEnglish = "&language=en-US&page=1"
 ActionMoviesTMDB_part2 = "a&sort_by=popularity.desc&include_adult=false&include_video=false"
 page_number = "&page=1"
 ActionMoviesTMDB_part3 = "&with_genres=28"
-
-
+ 
 ActionMoviesAPI = ActionMoviesTMDB + API_KEY + languageEnglish + ActionMoviesTMDB_part2 + page_number + ActionMoviesTMDB_part3
 
 // console.log(ActionMoviesAPI)
@@ -88,7 +112,7 @@ function ActionMoviePopulate() {
   
   AdventureMoviesAPI = AdventureMoviesTMDB + API_KEY + languageEnglish + AdventureMoviesTMDB_part2 + page_number + AdventureMoviesTMDB_part3
   
-  // console.log(AdventureMoviesAPI)
+  console.log(AdventureMoviesAPI)
   // make csv changeable & filterable
   function AdventureMoviePopulate() {
     d3.json(AdventureMoviesAPI).then(function(top20data) {
@@ -194,6 +218,9 @@ function ActionMoviePopulate() {
       
       CrimeMoviesAPI = CrimeMoviesTMDB + API_KEY + languageEnglish + CrimeMoviesTMDB_part2 + page_number + CrimeMoviesTMDB_part3
       
+    
+
+
       // console.log(CrimeMoviesAPI)
       // make csv changeable & filterable
       function CrimeMoviePopulate() {
@@ -640,77 +667,10 @@ function ActionMoviePopulate() {
                                     console.log(error);
                                   });
                                 };
-
-                                WarMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
-                                languageEnglish = "&language=en-US&page=1"
-                                WarMoviesTMDB_part2 = "a&sort_by=popularity.desc&include_adult=false&include_video=false"
-                                page_number = "&page=1"
-                                WarMoviesTMDB_part3 = "&with_genres=10752"
-                                
-                                WarMoviesAPI = WarMoviesTMDB + API_KEY + languageEnglish + WarMoviesTMDB_part2 + page_number + WarMoviesTMDB_part3
-                                
-                                // console.log(WarMoviesAPI)
-                                // make csv changeable & filterable
-                                function WarMoviePopulate() {
-                                  d3.json(WarMoviesAPI).then(function(top20data) {
-                                  // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
-                                      
-                                    // console.log(top20data.results)
-                                
-                                    d3.select(".image_gallery").selectAll("div")
-                                    .data(top20data.results)
-                                    .enter() // creates placeholder for new data
-                                    .append("div") // appends a div to placeholder
-                                    .style("height", "500", "width", "357")
-                                    .classed("box col-sm-6 col-md-4 col-lg-3 col-xl-2", true) // sets the class of the new div
-                                    
-                                    .html(function(d) {
-                                      return `<h3 style="text-align: center"> ${d.title}</h3> <br> <img height="500" width="357" src="https://image.tmdb.org/t/p/w500/${d.poster_path}">`;
-                                    })
-                                    
-                                    ; // sets the html in the div to an image tag with the link  
-                                
-                                      
-                                    }).catch(function(error) {
-                                      console.log(error);
-                                    });
-                                  };
-
-                                  WesternMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
-                                  languageEnglish = "&language=en-US&page=1"
-                                  WesternMoviesTMDB_part2 = "a&sort_by=popularity.desc&include_adult=false&include_video=false"
-                                  page_number = "&page=1"
-                                  WesternMoviesTMDB_part3 = "&with_genres=37"
-                                  
-                                  WesternMoviesAPI = WesternMoviesTMDB + API_KEY + languageEnglish + WesternMoviesTMDB_part2 + page_number + WesternMoviesTMDB_part3
-                                  
-                                  // console.log(WesternMoviesAPI)
-                                  // make csv changeable & filterable
-                                  function WesternMoviePopulate() {
-                                    d3.json(WesternMoviesAPI).then(function(top20data) {
-                                    // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
-                                        
-                                      // console.log(top20data.results)
-                                  
-                                      d3.select(".image_gallery").selectAll("div")
-                                      .data(top20data.results)
-                                      .enter() // creates placeholder for new data
-                                      .append("div") // appends a div to placeholder
-                                      .style("height", "500", "width", "357")
-                                      .classed("box col-sm-6 col-md-4 col-lg-3 col-xl-2", true) // sets the class of the new div
-                                      
-                                      .html(function(d) {
-                                        return `<h3 style="text-align: center"> ${d.title}</h3> <br> <img height="500" width="357" src="https://image.tmdb.org/t/p/w500/${d.poster_path}">`;
-                                      })
-                                      
-                                      ; // sets the html in the div to an image tag with the link  
-                                  
-                                        
-                                      }).catch(function(error) {
-                                        console.log(error);
-                                      });
-                                    };
-                        
+=======
+>>>>>>> parent of 82e8808... all the genre buttons now populate the page
 
 
+
+                                    init()
 
