@@ -119,6 +119,42 @@ function ActionMoviePopulate() {
     });
   };
 
+  function BOB() {
+    var movie_name = d3.select("#search").node().value;
+    d3.select("#search").node().value = "";
+  // alert(movie_name);
+  AdventureMoviesAPI = AdventureMoviesTMDB + API_KEY + languageEnglish + AdventureMoviesTMDB_part2 + page_number + AdventureMoviesTMDB_part3
+  
+  "https://api.themoviedb.org/3/search/movie?api_key=800fce5ab1ec74ebb99a75833c65f3df&language=en-US&query=inception&page=1&include_adult=false"
+  api_call = "https://api.themoviedb.org/3/search/movie?"
+  api_call2 = "&language=en-US&query=" + movie_name + "&page=1&include_adult=false"
+  
+  search = api_call + API_KEY + api_call2
+  
+  console.log(search)
+    d3.json(search).then(function (top20data) {
+      // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
+  
+      console.log(top20data.results)
+  
+      d3.select(".image_gallery").selectAll("div")
+        .data(top20data.results)
+        .enter() // creates placeholder for new data
+        .append("div") // appends a div to placeholder
+        .style("height", "500", "width", "357")
+        .classed("box col-sm-6 col-md-4 col-lg-3 col-xl-2", true) // sets the class of the new div
+  
+        .html(function (d) {
+          return `<h3 style="text-align: center"> ${d.title}</h3> <br> <img height="500" width="357" src="https://image.tmdb.org/t/p/w500/${d.poster_path}">`;
+        })
+  
+        ; // sets the html in the div to an image tag with the link  
+  
+  
+    }).catch(function (error) {
+      console.log(error);
+    });
+  };
 
   AdventureMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
   languageEnglish = "&language=en-US&page=1"
