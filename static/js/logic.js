@@ -83,7 +83,6 @@ function clearContent() {
   .remove()
 }
 
-
 ActionMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
 languageEnglish = "&language=en-US&page=1"
 ActionMoviesTMDB_part2 = "a&sort_by=popularity.desc&include_adult=false&include_video=false"
@@ -720,5 +719,77 @@ function ActionMoviePopulate() {
                                     console.log(error);
                                   });
                                 };
+
+                                WarMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
+                                languageEnglish = "&language=en-US&page=1"
+                                WarMoviesTMDB_part2 = "a&sort_by=popularity.desc&include_adult=false&include_video=false"
+                                page_number = "&page=1"
+                                WarMoviesTMDB_part3 = "&with_genres=10752"
+                                
+                                WarMoviesAPI = WarMoviesTMDB + API_KEY + languageEnglish + WarMoviesTMDB_part2 + page_number + WarMoviesTMDB_part3
+                                
+                                // console.log(WarMoviesAPI)
+                                // make csv changeable & filterable
+                                function WarMoviePopulate() {
+                                  d3.json(WarMoviesAPI).then(function(top20data) {
+                                  // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
+                                      
+                                    // console.log(top20data.results)
+                                
+                                    d3.select(".image_gallery").selectAll("div")
+                                    .data(top20data.results)
+                                    .enter() // creates placeholder for new data
+                                    .append("div") // appends a div to placeholder
+                                    .style("height", "500", "width", "357")
+                                    .classed("box col-sm-6 col-md-4 col-lg-3 col-xl-2", true) // sets the class of the new div
+                                    
+                                    .html(function(d) {
+                                      return `<h3 style="text-align: center"> ${d.title}</h3> <br> <img height="500" width="357" src="https://image.tmdb.org/t/p/w500/${d.poster_path}">`;
+                                    })
+                                    
+                                    ; // sets the html in the div to an image tag with the link  
+                                
+                                      
+                                    }).catch(function(error) {
+                                      console.log(error);
+                                    });
+                                  };
+
+                                  WesternMoviesTMDB = "https://api.themoviedb.org/3/discover/movie?" 
+                                  languageEnglish = "&language=en-US&page=1"
+                                  WesternMoviesTMDB_part2 = "a&sort_by=popularity.desc&include_adult=false&include_video=false"
+                                  page_number = "&page=1"
+                                  WesternMoviesTMDB_part3 = "&with_genres=37"
+                                  
+                                  WesternMoviesAPI = WesternMoviesTMDB + API_KEY + languageEnglish + WesternMoviesTMDB_part2 + page_number + WesternMoviesTMDB_part3
+                                  
+                                  // console.log(WesternMoviesAPI)
+                                  // make csv changeable & filterable
+                                  function WesternMoviePopulate() {
+                                    d3.json(WesternMoviesAPI).then(function(top20data) {
+                                    // d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
+                                        
+                                      // console.log(top20data.results)
+                                  
+                                      d3.select(".image_gallery").selectAll("div")
+                                      .data(top20data.results)
+                                      .enter() // creates placeholder for new data
+                                      .append("div") // appends a div to placeholder
+                                      .style("height", "500", "width", "357")
+                                      .classed("box col-sm-6 col-md-4 col-lg-3 col-xl-2", true) // sets the class of the new div
+                                      
+                                      .html(function(d) {
+                                        return `<h3 style="text-align: center"> ${d.title}</h3> <br> <img height="500" width="357" src="https://image.tmdb.org/t/p/w500/${d.poster_path}">`;
+                                      })
+                                      
+                                      ; // sets the html in the div to an image tag with the link  
+                                  
+                                        
+                                      }).catch(function(error) {
+                                        console.log(error);
+                                      });
+                                    };
+                        
+
 
 
